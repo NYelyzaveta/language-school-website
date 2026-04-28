@@ -2,7 +2,6 @@
   <header class="header">
     <div class="header-container">
       <router-link to="/" class="logo">
-        <span class="logo-icon">🌐</span>
         <span class="logo-text">LinguaLearn</span>
       </router-link>
       
@@ -54,9 +53,6 @@ const { locale } = useI18n()
   font-weight: 700;
   color: #0a0a1a;
   text-decoration: none;
-}
-.logo-icon {
-  color: #1d4ed8;
 }
 .nav-links {
   display: flex;
