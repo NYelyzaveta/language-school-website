@@ -5,8 +5,8 @@ import de from './locales/de.json'
 
 const i18n = createI18n({
   legacy: false, 
-  locale: 'uk', 
-  fallbackLocale: 'en', 
+  locale: 'en', 
+  fallbackLocale: 'uk', 
   messages: {
     en,
     uk,

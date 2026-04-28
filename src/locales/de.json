@@ -2,7 +2,8 @@
   "nav": {
     "home": "Startseite",
     "courses": "Kurse",
-    "shop": "Shop",
-    "login": "Anmelden"
+    "shop": "Geschäft",
+    "contact": "Kontakt",
+    "getStarted": "Loslegen"
   }
 }
