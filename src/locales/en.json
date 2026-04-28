@@ -5,5 +5,11 @@
     "shop": "Shop",
     "contact": "Contact",
     "getStarted": "Get Started"
+  },
+  "footer": {
+    "brandDesc": "Your gateway to mastering new languages. Join thousands of students learning with our expert instructors.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "rights": "© 2026 LinguaLearn. All rights reserved."
   }
 }

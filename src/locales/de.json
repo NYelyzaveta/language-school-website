@@ -5,5 +5,11 @@
     "shop": "Geschäft",
     "contact": "Kontakt",
     "getStarted": "Loslegen"
+  },
+  "footer": {
+    "brandDesc": "Ihr Weg zur Beherrschung neuer Sprachen. Schließen Sie sich Tausenden von Schülern an, die bei unseren erfahrenen Lehrern lernen.",
+    "quickLinks": "Schnelllinks",
+    "contact": "Kontakt",
+    "rights": "© 2026 LinguaLearn. Alle Rechte vorbehalten."
   }
 }
