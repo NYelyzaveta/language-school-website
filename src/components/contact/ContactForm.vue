@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, watch } from 'vue'
 
 const form = reactive({
   fullName: '',
@@ -48,6 +48,10 @@ const form = reactive({
   phone: '',
   interest: '',
   message: ''
+})
+
+watch(() => form.phone, (newValue) => {
+  form.phone = newValue.replace(/[^\d\s()+-]/g, '')
 })
 
 const handleSubmit = () => {
