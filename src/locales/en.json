@@ -11,5 +11,11 @@
     "quickLinks": "Quick Links",
     "contact": "Contact",
     "rights": "© 2026 LinguaLearn. All rights reserved."
+  },
+  "cta": {
+    "title": "Ready to Start Your Learning Journey?",
+    "desc": "Join thousands of students who have transformed their lives through language learning. Get started today with a free consultation.",
+    "btnPrimary": "Schedule Free Consultation",
+    "btnSecondary": "Explore Courses"
   }
 }

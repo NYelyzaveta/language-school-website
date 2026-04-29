@@ -11,5 +11,11 @@
     "quickLinks": "Schnelllinks",
     "contact": "Kontakt",
     "rights": "© 2026 LinguaLearn. Alle Rechte vorbehalten."
+  },
+  "cta": {
+    "title": "Bereit für Ihre Lernreise?",
+    "desc": "Schließen Sie sich Tausenden von Schülern an, die ihr Leben durch das Erlernen von Sprachen verändert haben. Beginnen Sie noch heute mit einer kostenlosen Beratung.",
+    "btnPrimary": "Kostenlose Beratung",
+    "btnSecondary": "Kurse entdecken"
   }
 }
