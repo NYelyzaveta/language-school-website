@@ -12,6 +12,13 @@
     "contact": "Kontakt",
     "rights": "© 2026 LinguaLearn. Alle Rechte vorbehalten."
   },
+  "hero": {
+    "title1": "Meistern Sie eine neue Sprache",
+    "title2": "noch heute",
+    "subtitle": "Treten Sie unserer Community bei und entdecken Sie neue Möglichkeiten. Erfahrene Lehrer, flexible Stundenpläne und bewährte Methoden für Ihren Erfolg.",
+    "btnPrimary": "Kurse durchsuchen",
+    "btnOutline": "Kontaktiere uns"
+  },
   "cta": {
     "title": "Bereit für Ihre Lernreise?",
     "desc": "Schließen Sie sich Tausenden von Schülern an, die ihr Leben durch das Erlernen von Sprachen verändert haben. Beginnen Sie noch heute mit einer kostenlosen Beratung.",

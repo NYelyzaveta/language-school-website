@@ -3,14 +3,13 @@
     <div class="hero-container">
       
       <div class="hero-content">
-        <h1 class="hero-title">Master a New Language<br>Today</h1>
+        <h1 class="hero-title">{{ $t('hero.title1') }}<br>{{ $t('hero.title2') }}</h1>
         <p class="hero-subtitle">
-          Join our community of language learners and unlock new opportunities. 
-          Expert instructors, flexible schedules, and proven methods to help you succeed.
+          {{ $t('hero.subtitle') }} 
         </p>
         <div class="hero-buttons">
-          <router-link to="/courses" class="btn-primary">Browse Courses</router-link>
-          <router-link to="/contact" class="btn-outline">Contact Us</router-link>
+          <router-link to="/courses" class="btn-primary">{{ $t('hero.btnPrimary') }}</router-link>
+          <router-link to="/contact" class="btn-outline">{{ $t('hero.btnOutline') }}</router-link>
         </div>
       </div>
       

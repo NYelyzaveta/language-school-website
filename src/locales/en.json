@@ -12,6 +12,13 @@
     "contact": "Contact",
     "rights": "© 2026 LinguaLearn. All rights reserved."
   },
+  "hero": {
+    "title1": "Master a New Language",
+    "title2": "Today",
+    "subtitle": "Join our community of language learners and unlock new opportunities. Expert instructors, flexible schedules, and proven methods to help you succeed.",
+    "btnPrimary": "Browse Courses",
+    "btnOutline": "Contact Us"
+  },
   "cta": {
     "title": "Ready to Start Your Learning Journey?",
     "desc": "Join thousands of students who have transformed their lives through language learning. Get started today with a free consultation.",
