@@ -1,6 +1,10 @@
 <template>
   <div class="base-card">
-    <slot></slot>
+    <slot>
+      <div class="default-content">
+        <p>No content provided.</p>
+      </div>
+    </slot>
   </div>
 </template>
 
@@ -17,5 +21,13 @@
 .base-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.default-content {
+  text-align: center;
+  color: #94a3b8;
+  border: 2px dashed #cbd5e1;
+  padding: 20px;
+  border-radius: 8px;
 }
 </style>
