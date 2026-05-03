@@ -1,48 +1,69 @@
 <template>
   <header class="header">
     <div class="header-container">
-      <router-link to="/" class="logo">
+      <router-link to="/" class="logo" @click="closeMenu">
         <span class="logo-text">LinguaLearn</span>
       </router-link>
-      
-    <nav class="nav-links">
-        <router-link to="/">{{ $t('nav.home') }}</router-link>
-        <router-link to="/courses">{{ $t('nav.courses') }}</router-link>
-        <router-link to="/shop">{{ $t('nav.shop') }}</router-link>
-        <router-link to="/contact">{{ $t('nav.contact') }}</router-link>
-    </nav>
 
-    <div class="header-actions">
+      <div class="nav-group" :class="{ 'is-open': isMenuOpen }">
+        <nav class="nav-links">
+          <router-link to="/" @click="closeMenu">{{ $t('nav.home') }}</router-link>
+          <router-link to="/courses" @click="closeMenu">{{ $t('nav.courses') }}</router-link>
+          <router-link to="/shop" @click="closeMenu">{{ $t('nav.shop') }}</router-link>
+          <router-link to="/contact" @click="closeMenu">{{ $t('nav.contact') }}</router-link>
+        </nav>
+      </div>
+
+      <div class="header-actions">
         <select v-model="locale" class="lang-switcher">
           <option value="uk">УКР</option>
           <option value="en">ENG</option>
           <option value="de">DEU</option>
         </select>
-
-        <router-link to="/contact" class="btn-dark">{{ $t('nav.getStarted') }}</router-link>
+        <router-link to="/contact" class="btn-dark desktop-only" @click="closeMenu">
+          {{ $t('nav.getStarted') }}
+        </router-link>
+          
+        <button class="mobile-menu-btn" @click="toggleMenu">
+          <span v-if="!isMenuOpen" class="burger-icon">☰</span>
+          <span v-else class="close-icon">✕</span>
+        </button>
       </div>
     </div>
   </header>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+
 const { locale } = useI18n()
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
 </script>
 
 <style scoped>
 .header {
   background-color: white;
   border-bottom: 1px solid #eaeaea;
-  padding: 20px 0;
+  padding: 16px 0;
   font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 100;
 }
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
 }
 .logo {
@@ -53,6 +74,10 @@ const { locale } = useI18n()
   font-weight: 700;
   color: #0a0a1a;
   text-decoration: none;
+}
+.nav-group {
+  display: flex;
+  align-items: center;
 }
 .nav-links {
   display: flex;
@@ -100,5 +125,44 @@ const { locale } = useI18n()
 }
 .btn-dark:hover {
   background-color: #1e293b;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #0f172a;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+  .mobile-menu-btn { display: block; }
+  .nav-group {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  .nav-group.is-open { display: flex; justify-content: center; }
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    display: block;
+  }
 }
 </style>
