@@ -40,7 +40,7 @@
   color: #94a3b8; 
   padding: 60px 0 20px;
   font-family: 'Inter', sans-serif;
-  margin-top: 40px; 
+  margin-top: 0 !important;
 }
 .footer-container {
   max-width: 1200px;

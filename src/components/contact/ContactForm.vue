@@ -40,7 +40,10 @@
 </template>
 
 <script setup>
-import { reactive, watch } from 'vue'
+import { reactive, watch, onMounted } from 'vue' 
+import { useRoute } from 'vue-router' 
+
+const route = useRoute() 
 
 const form = reactive({
   fullName: '',
@@ -48,6 +51,15 @@ const form = reactive({
   phone: '',
   interest: '',
   message: ''
+})
+
+onMounted(() => {
+  if (route.query.selectedCourse) {
+    const courseName = route.query.selectedCourse
+    const courseLevel = route.query.selectedLevel || ''
+    form.interest = courseName.toLowerCase()
+    form.message = `Hello! I would like to enroll in the ${courseName} course (${courseLevel} level). Please provide more details.`
+  }
 })
 
 watch(() => form.phone, (newValue) => {
