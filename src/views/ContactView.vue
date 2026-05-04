@@ -2,8 +2,8 @@
   <div class="contact-view">
     <section class="page-header">
       <div class="container text-center">
-        <h1>Contact Us</h1>
-        <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <h1>{{ $t('contact.title') }}</h1>
+        <p>{{ $t('contact.subtitle') }}</p>
       </div>
     </section>
 

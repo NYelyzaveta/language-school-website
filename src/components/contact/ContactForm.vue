@@ -1,40 +1,40 @@
 <template>
   <div class="contact-form-card">
-    <h2>Send us a Message</h2>
-    <p class="subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+    <h2>{{ $t('contact.title') }}</h2>
+    <p class="subtitle">{{ $t('contact.subtitle') }}</p>
 
     <form @submit.prevent="handleSubmit" class="form">
       <div class="form-group">
-        <label>Full Name *</label>
+        <label>{{ $t('contact.nameLabel') }}</label>
         <input v-model="form.fullName" type="text" placeholder="John Doe" required />
       </div>
 
       <div class="form-group">
-        <label>Email Address *</label>
+        <label>{{ $t('contact.emailLabel') }}</label>
         <input v-model="form.email" type="email" placeholder="john@example.com" required />
       </div>
 
       <div class="form-group">
-        <label>Phone Number</label>
+        <label>{{ $t('contact.phoneLabel') }}</label>
         <input v-model="form.phone" type="tel" placeholder="(555) 123-4567" />
       </div>
 
       <div class="form-group">
-        <label>Interested In</label>
+        <label>{{ $t('contact.interestLabel') }}</label>
         <select v-model="form.interest">
-          <option value="" disabled>Select a language</option>
-          <option value="korean">Korean</option>
-          <option value="german">German</option>
-          <option value="english">English</option>
+          <option value="" disabled>{{ $t('contact.selectLanguage') }}</option>
+          <option value="korean">{{ $t('contact.korean') }}</option>
+          <option value="german">{{ $t('contact.german') }}</option>
+          <option value="english">{{ $t('contact.english') }}</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Message *</label>
-        <textarea v-model="form.message" rows="4" placeholder="Tell us about your language learning goals..." required></textarea>
+        <label>{{ $t('contact.messageLabel') }}</label>
+        <textarea v-model="form.message" rows="4" :placeholder="$t('contact.messagePlaceholder')" required></textarea>
       </div>
 
-      <button type="submit" class="btn-submit">Send Message</button>
+      <button type="submit" class="btn-submit">{{ $t('contact.btnSubmit') }}</button>
     </form>
   </div>
 </template>

@@ -24,5 +24,81 @@
     "desc": "Schließen Sie sich Tausenden von Schülern an, die ihr Leben durch das Erlernen von Sprachen verändert haben. Beginnen Sie noch heute mit einer kostenlosen Beratung.",
     "btnPrimary": "Kostenlose Beratung",
     "btnSecondary": "Kurse entdecken"
+  },
+  "homePopular": {
+    "title": "Unsere beliebten Kurse",
+    "subtitle": "Beginnen Sie Ihre Sprachreise mit unseren am besten bewerteten Programmen.",
+    "loading": "Beliebte Kurse werden geladen...",
+    "btnViewAll": "Alle Kurse entdecken"
+  },
+  "homeFeatures": {
+    "title": "Warum LinguaLearn wählen?",
+    "subtitle": "Wir bieten alles, was Sie für den Erfolg beim Sprachenlernen benötigen"
+  },
+  "courses": {
+    "headerTitle": "Unsere Kurse",
+    "headerDesc": "Wählen Sie aus unserer großen Auswahl an Sprachkursen für alle Niveaus. Kleine Klassengrößen sorgen für persönliche Aufmerksamkeit und beschleunigtes Lernen.",
+    "loading": "Kurse werden aus der Datenbank geladen...",
+    "showing": "Anzeigen",
+    "coursesWord": "Kurse",
+    "allLanguages": "Alle Sprachen",
+    "perCourse": "pro Kurs",
+    "enrollNow": "Jetzt anmelden",
+    "english": "Englisch",
+    "german": "Deutsch",
+    "korean": "Koreanisch",
+    "beginner": "Anfänger",
+    "intermediate": "Mittelstufe",
+    "advanced": "Fortgeschrittene"
+  },
+  "contact": {
+    "title": "Kontaktiere uns",
+    "subtitle": "Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+    "nameLabel": "Ihr Name",
+    "emailLabel": "Ihre E-Mail",
+    "phoneLabel": "Ihre Telefonnummer",
+    "interestLabel": "Interessiert an",
+    "selectLanguage": "Sprache auswählen",
+    "english": "Englisch",
+    "german": "Deutsch",
+    "korean": "Koreanisch",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Schreiben Sie uns eine Nachricht...",
+    "btnSubmit": "Nachricht senden"
+  },
+  "coursesCta": {
+    "title": "Nicht sicher, welchen Kurs Sie wählen sollen?",
+    "desc": "Unsere Sprachberater helfen Ihnen, den perfekten Kurs für Ihre Ziele und Ihren Zeitplan zu finden.",
+    "btn": "Kostenlose Beratung"
+  },
+  "ui": {
+    "loading": "Laden..."
+  },
+  "features": {
+    "title": "Warum LinguaLearn wählen?",
+    "subtitle": "Wir bieten alles, was Sie für den Erfolg beim Sprachenlernen benötigen",
+    "f1Title": "Erfahrene Lehrer",
+    "f1Desc": "Lernen Sie von Muttersprachlern und zertifizierten Sprachlehrern mit langjähriger Erfahrung.",
+    "f2Title": "Flexibler Zeitplan",
+    "f2Desc": "Wählen Sie Vormittags-, Nachmittags- oder Abendkurse, die zu Ihrem Lebensstil passen.",
+    "f3Title": "Interaktives Lernen",
+    "f3Desc": "Nehmen Sie an Konversationsübungen, kulturellen Aktivitäten und realen Szenarien teil.",
+    "f4Title": "Zertifizierung",
+    "f4Desc": "Erhalten Sie nach Abschluss des Kurses international anerkannte Zertifikate.",
+    "f5Title": "Mehrere Standorte",
+    "f5Desc": "Günstige Standorte in der ganzen Stadt sowie verfügbare Online-Kurse.",
+    "f6Title": "15+ Sprachen",
+    "f6Desc": "Wählen Sie aus unserer großen Auswahl an Sprachen zum Erlernen und Meistern."
+  },
+  "contactInfo": {
+    "title": "Kontaktiere uns",
+    "subtitle": "Egal, ob Sie sich anmelden möchten oder nur ein paar Fragen haben, unser Team hilft Ihnen gerne weiter.",
+    "visitUs": "Besuchen Sie uns",
+    "address1": "Lernstraße 123",
+    "address2": "Berlin, 10115",
+    "callUs": "Rufen Sie uns an",
+    "mainPhone": "Haupt: (030) 123-4567",
+    "supportPhone": "Support: (030) 123-4568",
+    "emailUs": "Schreiben Sie uns"
   }
 }

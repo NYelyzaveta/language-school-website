@@ -6,7 +6,7 @@
       <div class="container">
         
         <div v-if="isLoading" class="loading-state">
-          <h2>Loading courses from database...</h2>
+          <h2>{{ $t('courses.loading') }}</h2>
         </div>
         
         <div v-else class="catalog-wrapper">

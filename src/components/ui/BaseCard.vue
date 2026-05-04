@@ -2,7 +2,7 @@
   <div class="base-card">
     <slot>
       <div class="default-content">
-        <p>No content provided.</p>
+        <p>{{ $t('ui.loading') }}</p>
       </div>
     </slot>
   </div>

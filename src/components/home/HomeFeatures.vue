@@ -2,8 +2,8 @@
   <section class="features-section">
     <div class="container">
       <div class="section-header">
-        <h2>Why Choose LinguaLearn?</h2>
-        <p>We provide everything you need for language learning success</p>
+        <h2>{{ $t('homeFeatures.title') }}</h2>
+        <p>{{ $t('homeFeatures.subtitle') }}</p>
       </div>
 
       <div class="features-grid">
@@ -12,8 +12,8 @@
           <div class="icon-wrapper">
             <span class="icon">{{ feature.icon }}</span>
           </div>
-          <h3>{{ feature.title }}</h3>
-          <p>{{ feature.description }}</p>
+          <h3>{{ $t(feature.title) }}</h3>
+          <p>{{ $t(feature.description) }}</p>
           
         </BaseCard>
       </div>
@@ -26,12 +26,12 @@ import { ref } from 'vue'
 import BaseCard from '@/components/ui/BaseCard.vue'
 
 const features = ref([
-  { id: 1, icon: '👥', title: 'Expert Instructors', description: 'Learn from native speakers and certified language teachers with years of experience.' },
-  { id: 2, icon: '🕒', title: 'Flexible Schedule', description: 'Choose from morning, afternoon, or evening classes that fit your lifestyle.' },
-  { id: 3, icon: '📖', title: 'Interactive Learning', description: 'Engage in conversation practice, cultural activities, and real-world scenarios.' },
-  { id: 4, icon: '🏅', title: 'Certification', description: 'Earn internationally recognized certificates upon course completion.' },
-  { id: 5, icon: '📍', title: 'Multiple Locations', description: 'Convenient locations across the city and online classes available.' },
-  { id: 6, icon: '🌐', title: '15+ Languages', description: 'Choose from our extensive selection of languages to learn and master.' }
+  { id: 1, icon: '👥', title: 'features.f1Title', description: 'features.f1Desc' },
+  { id: 2, icon: '🕒', title: 'features.f2Title', description: 'features.f2Desc' },
+  { id: 3, icon: '📖', title: 'features.f3Title', description: 'features.f3Desc' },
+  { id: 4, icon: '🏅', title: 'features.f4Title', description: 'features.f4Desc' },
+  { id: 5, icon: '📍', title: 'features.f5Title', description: 'features.f5Desc' },
+  { id: 6, icon: '🌐', title: 'features.f6Title', description: 'features.f6Desc' }
 ])
 </script>
 

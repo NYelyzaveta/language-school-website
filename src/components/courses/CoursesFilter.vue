@@ -1,15 +1,15 @@
 <template>
   <div class="filter-bar">
     <div class="results-info">
-      <span>Showing <strong>{{ count }}</strong> courses</span>
+      <span>{{ $t('courses.showing') }} <strong>{{ count }}</strong> {{ $t('courses.coursesWord') }}</span>
     </div>
     
     <div class="filter-actions">
       <select v-model="selectedLanguage" class="filter-select">
-        <option value="">All Languages</option>
-        <option value="English">English</option>
-        <option value="German">German</option>
-        <option value="Korean">Korean</option>
+        <option value="">{{ $t('courses.allLanguages') }}</option>
+        <option value="English">{{ $t('courses.english') }}</option>
+        <option value="German">{{ $t('courses.german') }}</option>
+        <option value="Korean">{{ $t('courses.korean') }}</option>
       </select>
     </div>
   </div>

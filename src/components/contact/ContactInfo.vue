@@ -1,30 +1,30 @@
 <template>
   <div class="contact-info">
-    <h2>Get in Touch</h2>
-    <p class="subtitle">Whether you're ready to enroll or just have a few questions, our team is here to help.</p>
+    <h2>{{ $t('contactInfo.title') }}</h2>
+    <p class="subtitle">{{ $t('contactInfo.subtitle') }}</p>
 
     <div class="info-cards">
       <div class="info-card">
         <div class="icon">📍</div>
         <div>
-          <h3>Visit Us</h3>
-          <p>123 Learning Street<br>New York, NY 10001</p>
+          <h3>{{ $t('contactInfo.visitUs') }}</h3>
+          <p>{{ $t('contactInfo.address1') }}<br>{{ $t('contactInfo.address2') }}</p>
         </div>
       </div>
 
       <div class="info-card">
         <div class="icon">📞</div>
         <div>
-          <h3>Call Us</h3>
-          <p>Main: (555) 123-4567<br>Support: (555) 123-4568</p>
+          <h3>{{ $t('contactInfo.callUs') }}</h3>
+          <p>{{ $t('contactInfo.mainPhone') }}<br>{{ $t('contactInfo.supportPhone') }}</p>
         </div>
       </div>
 
       <div class="info-card">
         <div class="icon">✉️</div>
         <div>
-          <h3>Email Us</h3>
-          <p>info@lingualearn.com<br>support@lingualearn.com</p>
+          <h3>{{ $t('contactInfo.emailUs') }}</h3>
+          <p>info@linguallearn.com<br>support@linguallearn.com</p>
         </div>
       </div>
     </div>

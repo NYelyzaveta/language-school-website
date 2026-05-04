@@ -24,5 +24,81 @@
     "desc": "Join thousands of students who have transformed their lives through language learning. Get started today with a free consultation.",
     "btnPrimary": "Schedule Free Consultation",
     "btnSecondary": "Explore Courses"
+  },
+  "homePopular": {
+    "title": "Our Popular Courses",
+    "subtitle": "Start your language journey with our most highly-rated programs.",
+    "loading": "Loading popular courses...",
+    "btnViewAll": "Explore All Courses"
+  },
+  "homeFeatures": {
+    "title": "Why Choose LinguaLearn?",
+    "subtitle": "We provide everything you need for language learning success"
+  },
+  "courses": {
+    "headerTitle": "Our Courses",
+    "headerDesc": "Choose from our wide selection of language courses designed for all skill levels. Small class sizes ensure personalized attention and accelerated learning.",
+    "loading": "Loading courses from database...",
+    "showing": "Showing",
+    "coursesWord": "courses",
+    "allLanguages": "All Languages",
+    "perCourse": "per course",
+    "enrollNow": "Enroll Now",
+    "english": "English",
+    "german": "German",
+    "korean": "Korean",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "coursesCta": {
+    "title": "Not Sure Which Course to Choose?",
+    "desc": "Our language advisors are here to help you find the perfect course for your goals and schedule.",
+    "btn": "Get Free Consultation"
+  },
+  "contact": {
+    "title": "Send us a Message",
+    "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+    "nameLabel": "Full Name *",
+    "emailLabel": "Email Address *",
+    "phoneLabel": "Phone Number",
+    "interestLabel": "Interested In",
+    "selectLanguage": "Select a language",
+    "english": "English",
+    "german": "German",
+    "korean": "Korean",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Tell us about your language learning goals...",
+    "btnSubmit": "Send Message"
+  },
+  "ui": {
+    "loading": "No content provided."
+  },
+  "features": {
+    "title": "Why Choose LinguaLearn?",
+    "subtitle": "We provide everything you need for language learning success",
+    "f1Title": "Expert Instructors",
+    "f1Desc": "Learn from native speakers and certified language teachers with years of experience.",
+    "f2Title": "Flexible Schedule",
+    "f2Desc": "Choose from morning, afternoon, or evening classes that fit your lifestyle.",
+    "f3Title": "Interactive Learning",
+    "f3Desc": "Engage in conversation practice, cultural activities, and real-world scenarios.",
+    "f4Title": "Certification",
+    "f4Desc": "Earn internationally recognized certificates upon course completion.",
+    "f5Title": "Multiple Locations",
+    "f5Desc": "Convenient locations across the city and online classes available.",
+    "f6Title": "15+ Languages",
+    "f6Desc": "Choose from our extensive selection of languages to learn and master."
+  },
+  "contactInfo": {
+    "title": "Get in Touch",
+    "subtitle": "Whether you're ready to enroll or just have a few questions, our team is here to help.",
+    "visitUs": "Visit Us",
+    "address1": "123 Learning Street",
+    "address2": "New York, NY 10001",
+    "callUs": "Call Us",
+    "mainPhone": "Main: (555) 123-4567",
+    "supportPhone": "Support: (555) 123-4568",
+    "emailUs": "Email Us"
   }
 }

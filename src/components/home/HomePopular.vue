@@ -2,12 +2,12 @@
   <section class="popular-courses">
     <div class="container">
       <div class="section-header">
-        <h2>Our Popular Courses</h2>
-        <p>Start your language journey with our most highly-rated programs.</p>
+        <h2>{{ $t('homePopular.title') }}</h2>
+        <p>{{ $t('homePopular.subtitle') }}</p>
       </div>
       
       <div v-if="isLoading" class="loading-state">
-        Loading popular courses...
+        {{ $t('homePopular.loading') }}
       </div>
       
       <div v-else class="courses-wrapper">
@@ -15,7 +15,7 @@
         
         <div class="view-all-action">
           <router-link to="/courses" class="btn-view-all">
-            Explore All Courses
+            {{ $t('homePopular.btnViewAll') }}
           </router-link>
         </div>
       </div>

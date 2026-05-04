@@ -3,9 +3,9 @@
     <div v-for="course in courses" :key="course.id" class="course-card">
       
       <div class="card-header">
-        <h3 class="course-title">{{ course.title }}</h3>
+        <h3 class="course-title">{{ $t('courses.' + course.title.toLowerCase()) }}</h3>
         <span class="level-badge" :class="course.level?.toLowerCase()">
-          {{ course.level }}
+          {{ $t('courses.' + course.level.toLowerCase()) }}
         </span>
       </div>
       
@@ -26,9 +26,9 @@
       <div class="card-footer">
         <div class="price-block">
           <span class="price">${{ course.price }}</span>
-          <span class="per-course">per course</span>
+          <span class="per-course">{{ $t('courses.perCourse') }}</span>
         </div> 
-        <button class="btn-enroll" @click="goToContact(course)">Enroll Now</button>
+        <button class="btn-enroll" @click="goToContact(course)">{{ $t('courses.enrollNow') }}</button>
       </div>
       
     </div>

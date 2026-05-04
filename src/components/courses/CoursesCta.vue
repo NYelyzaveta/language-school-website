@@ -1,9 +1,9 @@
 <template>
   <section class="cta-section">
     <div class="container text-center">
-      <h2>Not Sure Which Course to Choose?</h2>
-      <p>Our language advisors are here to help you find the perfect course for your goals and schedule.</p>
-      <router-link to="/contact" class="btn-consultation">Get Free Consultation</router-link>
+      <h2>{{ $t('coursesCta.title') }}</h2>
+      <p>{{ $t('coursesCta.desc') }}</p>
+      <router-link to="/contact" class="btn-consultation">{{ $t('coursesCta.btn') }}</router-link>
     </div>
   </section>
 </template>

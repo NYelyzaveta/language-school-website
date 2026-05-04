@@ -1,9 +1,8 @@
 <template>
   <section class="page-header">
     <div class="container text-center">
-      <h1>Our Courses</h1>
-      <p>Choose from our wide selection of language courses designed for all skill levels.<br>
-         Small class sizes ensure personalized attention and accelerated learning.</p>
+      <h1>{{ $t('courses.headerTitle') }}</h1>
+      <p>{{ $t('courses.headerDesc') }}</p>
     </div>
   </section>
 </template>
