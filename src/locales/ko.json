@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "home": "홈",
+    "courses": "강좌",
+    "shop": "상점",
+    "contact": "문의",
+    "getStarted": "시작하기"
+  },
+  "footer": {
+    "brandDesc": "새로운 언어 마스터를 위한 관문입니다. 전문 강사진과 함께 배우는 수천 명의 학생들과 함께하세요.",
+    "quickLinks": "빠른 링크",
+    "contact": "문의하기",
+    "rights": "© 2026 LinguaLearn. 모든 권리 보유."
+  },
+  "hero": {
+    "title1": "새로운 언어를 마스터하세요",
+    "title2": "오늘부터",
+    "subtitle": "언어 학습자 커뮤니티에 참여하여 새로운 기회를 발견하세요. 전문 강사, 유연한 일정, 성공을 돕는 검증된 학습법을 제공합니다.",
+    "btnPrimary": "강좌 둘러보기",
+    "btnOutline": "문의하기"
+  },
+  "cta": {
+    "title": "학습 여정을 시작할 준비가 되셨나요?",
+    "desc": "언어 학습을 통해 삶을 변화시킨 수천 명의 학생들과 함께하세요. 오늘 무료 상담으로 시작해 보세요.",
+    "btnPrimary": "무료 상담 예약",
+    "btnSecondary": "강좌 살펴보기"
+  },
+  "homePopular": {
+    "title": "인기 강좌",
+    "subtitle": "가장 높은 평가를 받은 프로그램으로 언어 학습 여정을 시작하세요.",
+    "loading": "인기 강좌 불러오는 중...",
+    "btnViewAll": "모든 강좌 보기"
+  },
+  "homeFeatures": {
+    "title": "LinguaLearn을 선택해야 하는 이유",
+    "subtitle": "언어 학습 성공에 필요한 모든 것을 제공합니다."
+  },
+  "courses": {
+    "headerTitle": "강좌 안내",
+    "headerDesc": "모든 레벨을 위해 설계된 다양한 언어 강좌 중에서 선택하세요. 소규모 학급으로 맞춤형 지도와 빠른 학습을 보장합니다.",
+    "loading": "데이터베이스에서 강좌 불러오는 중...",
+    "showing": "표시 중",
+    "coursesWord": "개의 강좌",
+    "allLanguages": "모든 언어",
+    "perCourse": "강좌당",
+    "enrollNow": "지금 등록하기",
+    "english": "영어",
+    "german": "독일어",
+    "korean": "한국어",
+    "beginner": "초급",
+    "intermediate": "중급",
+    "advanced": "고급"
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": "아래 양식을 작성해 주시면 24시간 이내에 답변해 드리겠습니다.",
+    "nameLabel": "성명",
+    "emailLabel": "이메일 주소",
+    "phoneLabel": "전화번호",
+    "interestLabel": "관심 언어",
+    "selectLanguage": "언어 선택",
+    "english": "영어",
+    "german": "독일어",
+    "korean": "한국어",
+    "messageLabel": "메시지",
+    "messagePlaceholder": "언어 학습 목표에 대해 이야기해 주세요...",
+    "btnSubmit": "메시지 보내기"
+  },
+  "coursesCta": {
+    "title": "어떤 강좌를 선택해야 할지 모르시겠나요?",
+    "desc": "언어 상담사가 귀하의 목표와 일정에 맞는 완벽한 강좌를 찾도록 도와드립니다.",
+    "btn": "무료 상담 받기"
+  },
+  "ui": {
+    "loading": "로딩 중..."
+  },
+  "features": {
+    "title": "LinguaLearn을 선택해야 하는 이유",
+    "subtitle": "언어 학습 성공에 필요한 모든 것을 제공합니다.",
+    "f1Title": "전문 강사진",
+    "f1Desc": "원어민 및 다년간의 경험을 갖춘 공인 언어 교사로부터 배우세요.",
+    "f2Title": "유연한 일정",
+    "f2Desc": "라이프스타일에 맞게 오전, 오후 또는 저녁 수업 중에서 선택하세요.",
+    "f3Title": "인터랙티브 학습",
+    "f3Desc": "회화 연습, 문화 활동 및 실제 상황에 참여하세요.",
+    "f4Title": "인증서",
+    "f4Desc": "강좌 수료 후 국제적으로 인정받는 인증서를 받으세요.",
+    "f5Title": "다양한 위치",
+    "f5Desc": "도시 전역의 편리한 위치 및 온라인 수업이 가능합니다.",
+    "f6Title": "15개 이상의 언어",
+    "f6Desc": "학습하고 마스터할 수 있는 다양한 언어 중에서 선택하세요."
+  },
+  "contactInfo": {
+    "title": "연락처",
+    "subtitle": "등록할 준비가 되셨거나 질문이 있으시면 언제든지 저희 팀이 도와드리겠습니다.",
+    "visitUs": "오시는 길",
+    "address1": "학습로 123",
+    "address2": "서울특별시, 04524",
+    "callUs": "전화 문의",
+    "mainPhone": "대표전화: (555) 123-4567",
+    "supportPhone": "고객지원: (555) 123-4568",
+    "emailUs": "이메일 문의"
+  }
+}

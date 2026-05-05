@@ -19,6 +19,7 @@
           <option value="uk">УКР</option>
           <option value="en">ENG</option>
           <option value="de">DEU</option>
+          <option value="ko">한국어</option>
         </select>
         <router-link to="/contact" class="btn-dark desktop-only" @click="closeMenu">
           {{ $t('nav.getStarted') }}
