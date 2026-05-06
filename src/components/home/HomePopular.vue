@@ -29,6 +29,7 @@ import { storeToRefs } from 'pinia'
 import { useCoursesStore } from '@/stores/coursesStore'
 
 import CoursesGrid from '@/components/courses/CoursesGrid.vue'
+import BaseCard from '../ui/BaseCard.vue'
 
 const coursesStore = useCoursesStore()
 const { coursesList, isLoading } = storeToRefs(coursesStore)
