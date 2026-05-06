@@ -155,7 +155,6 @@ const goToProduct = (id) => {
   color: #2563eb; 
 }
 
-/* Твоя кнопка */
 .btn-enroll {
   width: 100%;
   padding: 14px;

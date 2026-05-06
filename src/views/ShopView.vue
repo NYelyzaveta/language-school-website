@@ -156,22 +156,19 @@ const filteredProducts = computed(() => {
   border-color: #cbd5e1;
 }
 
-/* Стиль для селекту, щоб він виглядав як твої кнопки */
 .dropdown-btn {
-  appearance: none; /* Прибирає стандартну браузерну стрілочку */
+  appearance: none; 
   -webkit-appearance: none;
   background-color: white; 
   color: #0f172a;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   border: 1px solid transparent;
   
-  /* Малюємо власну акуратну стрілочку через SVG */
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%230f172a%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat;
-  background-position: right 14px center; /* Позиція стрілочки */
+  background-position: right 14px center; 
   background-size: 16px;
   
-  /* Робимо відступ справа трохи більшим, щоб текст не наїжджав на стрілочку */
   padding-right: 40px; 
 }
 
@@ -180,7 +177,6 @@ const filteredProducts = computed(() => {
   border-color: #cbd5e1;
 }
 
-/* Якщо хочеш, щоб на мобільних пристроях фільтри теж виглядали гарно і не злипалися */
 .shop-filters {
   display: flex;
   flex-wrap: wrap;
@@ -190,6 +186,6 @@ const filteredProducts = computed(() => {
   padding: 10px;
   border-radius: 30px;
   width: fit-content;
-  align-items: center; /* Додаємо вирівнювання по центру */
+  align-items: center;
 }
 </style>
