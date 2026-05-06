@@ -1,6 +1,6 @@
 <template>
   <div class="courses-grid">
-    <div v-for="course in courses" :key="course.id" class="course-card">
+    <BaseCard v-for="course in courses" :key="course.id" class="course-card-content">
       
       <div class="card-header">
         <h3 class="course-title">{{ $t('courses.' + course.title.toLowerCase()) }}</h3>
@@ -31,12 +31,13 @@
         <button class="btn-enroll" @click="goToContact(course)">{{ $t('courses.enrollNow') }}</button>
       </div>
       
-    </div>
+    </BaseCard>
   </div>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
+import BaseCard from '@/components/ui/BaseCard.vue'
 
 defineProps({
   courses: {
@@ -63,7 +64,6 @@ const goToContact = (course) => {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 30px;
-
 }
 
 @media (max-width: 1024px) {
@@ -78,19 +78,10 @@ const goToContact = (course) => {
   }
 }
 
-.course-card {
-  background: white;
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
-  padding: 30px;
+.course-card-content {
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  height: 100%; 
 }
 
 .card-header {
