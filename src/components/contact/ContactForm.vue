@@ -67,8 +67,8 @@ watch(() => form.phone, (newValue) => {
 })
 
 const handleSubmit = () => {
-  console.log('Дані на відправку:', form)
-  alert(`Дякуємо, ${form.fullName}! Ваше повідомлення отримано.`)
+  console.log('Data to submit:', form)
+  alert(`Thank you, ${form.fullName}! Your message has been received.`)
 
   form.fullName = ''
   form.email = ''
