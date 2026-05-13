@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useAuthStore } from '@/stores/authStore'
 import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
@@ -27,8 +28,40 @@ const router = createRouter({
     {
       path: '/shop/:id',
       name: 'product-detail',
-      component: () => import('../views/ProductDetailView.vue'),    },
+      component: () => import('../views/ProductDetailView.vue'),
+    },
+    {
+      path: '/checkout',
+      name: 'checkout',
+      component: () => import('../views/CheckoutView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginPage.vue'),
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('../views/AdminView.vue'),
+      meta: { requiresAdmin: true },
+    },
   ],
+})
+
+router.beforeEach((to, from) => {
+
+  const authStore = useAuthStore()
+  if (to.meta.requiresAdmin) {
+    if (authStore.isAdmin) {
+      return true 
+    } else {
+      alert('Access denied! Admin only.')
+      return '/' 
+    }
+  }
+
+  return true 
 })
 
 export default router

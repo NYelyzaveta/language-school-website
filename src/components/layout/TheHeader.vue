@@ -21,8 +21,32 @@
           <option value="de">DEU</option>
           <option value="ko">한국어</option>
         </select>
+        
+        <div class="auth-block desktop-only">
+          <template v-if="authStore.user">
+            <span class="user-name" :title="authStore.user.email">
+              👋 {{ authStore.user.displayName?.split(' ')[0] || authStore.user.email.split('@')[0] }}
+            </span>
+            
+            <router-link 
+              v-if="authStore.isAdmin" 
+              to="/admin" 
+              class="btn-outline admin-btn"
+              @click="closeMenu"
+            >
+              Admin
+            </router-link>
+
+            <button @click="authStore.logout" class="btn-outline">{{ $t('auth.logout') }}</button>
+          </template>
+          
+          <router-link v-else to="/login" class="btn-outline" @click="closeMenu">
+            {{ $t('auth.login') }}
+          </router-link>
+        </div>
+
         <router-link to="/contact" class="btn-dark desktop-only" @click="closeMenu">
-          {{ $t('nav.getStarted') }}
+          Get Started
         </router-link>
           
         <button class="mobile-menu-btn" @click="toggleMenu">
@@ -35,9 +59,11 @@
 </template>
 
 <script setup>
+import { useAuthStore } from '@/stores/authStore'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+const authStore = useAuthStore()
 const { locale } = useI18n()
 const isMenuOpen = ref(false)
 
@@ -114,6 +140,45 @@ const closeMenu = () => {
   border-color: #1d4ed8;
 }
 
+.auth-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-right: 1px solid #e2e8f0; 
+  padding-right: 16px;
+  margin-right: 4px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 0.95rem;
+  
+  max-width: 150px; 
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #0f172a;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
+}
+
 .btn-dark {
   background-color: #0a0a1a;
   color: white;
@@ -126,6 +191,21 @@ const closeMenu = () => {
 }
 .btn-dark:hover {
   background-color: #1e293b;
+}
+
+.admin-btn {
+  color: #dc2626; 
+  border-color: #dc2626;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-btn:hover {
+  background-color: #fef2f2;
+  border-color: #b91c1c;
+  color: #b91c1c;
 }
 
 .mobile-menu-btn {
