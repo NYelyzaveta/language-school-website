@@ -51,6 +51,8 @@ import { ref, reactive, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import db from '@/firebase/config'
 import { collection, addDoc } from 'firebase/firestore/lite'
+import { useAuthStore } from '@/stores/authStore'
+const authStore = useAuthStore()
 
 const route = useRoute()
 const isSubmitting = ref(false)
@@ -64,6 +66,10 @@ const form = reactive({
 })
 
 onMounted(() => {
+   if (authStore.user) {
+    form.email = authStore.user.email || ''
+  }
+
   if (route.query.selectedCourse) {
     const courseName = route.query.selectedCourse
     const courseLevel = route.query.selectedLevel || ''

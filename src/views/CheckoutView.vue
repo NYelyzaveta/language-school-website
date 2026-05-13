@@ -75,7 +75,6 @@ const orderForm = reactive({
 
 onMounted(() => {
   if (authStore.user) {
-    orderForm.fullName = authStore.user.displayName || ''
     orderForm.email = authStore.user.email || ''
   }
 })
