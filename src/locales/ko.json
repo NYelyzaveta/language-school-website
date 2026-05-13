@@ -6,6 +6,10 @@
     "contact": "문의",
     "getStarted": "시작하기"
   },
+  "auth": {
+    "login": "로그인",
+    "logout": "로그아웃"
+  },
   "footer": {
     "brandDesc": "새로운 언어 마스터를 위한 관문입니다. 전문 강사진과 함께 배우는 수천 명의 학생들과 함께하세요.",
     "quickLinks": "빠른 링크",

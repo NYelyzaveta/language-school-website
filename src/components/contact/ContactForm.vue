@@ -31,26 +31,36 @@
 
       <div class="form-group">
         <label>{{ $t('contact.messageLabel') }}</label>
-        <textarea v-model="form.message" rows="4" :placeholder="$t('contact.messagePlaceholder')" required></textarea>
+        <textarea
+          v-model="form.message"
+          rows="4"
+          :placeholder="$t('contact.messagePlaceholder')"
+          required
+        ></textarea>
       </div>
 
-      <button type="submit" class="btn-submit">{{ $t('contact.btnSubmit') }}</button>
+      <button type="submit" class="btn-submit" :disabled="isSubmitting">
+        {{ isSubmitting ? 'Sending...' : $t('contact.btnSubmit') }}
+      </button>
     </form>
   </div>
 </template>
 
 <script setup>
-import { reactive, watch, onMounted } from 'vue' 
-import { useRoute } from 'vue-router' 
+import { ref, reactive, watch, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import db from '@/firebase/config'
+import { collection, addDoc } from 'firebase/firestore/lite'
 
-const route = useRoute() 
+const route = useRoute()
+const isSubmitting = ref(false)
 
 const form = reactive({
   fullName: '',
   email: '',
   phone: '',
   interest: '',
-  message: ''
+  message: '',
 })
 
 onMounted(() => {
@@ -62,19 +72,26 @@ onMounted(() => {
   }
 })
 
-watch(() => form.phone, (newValue) => {
-  form.phone = newValue.replace(/[^\d\s()+-]/g, '')
-})
+watch(
+  () => form.phone,
+  (newValue) => {
+    form.phone = newValue.replace(/[^\d\s()+-]/g, '')
+  },
+)
 
-const handleSubmit = () => {
-  console.log('Data to submit:', form)
-  alert(`Thank you, ${form.fullName}! Your message has been received.`)
+const handleSubmit = async () => {
+  try {
+    await addDoc(collection(db, 'course_registrations'), {
+      ...form,
+      createdAt: new Date().toISOString(),
+    })
 
-  form.fullName = ''
-  form.email = ''
-  form.phone = ''
-  form.interest = ''
-  form.message = ''
+    alert(`Thank you, ${form.fullName}! Your course request has been submitted.`)
+
+    Object.keys(form).forEach((key) => (form[key] = ''))
+  } catch (e) {
+    alert('Submission error')
+  }
 }
 </script>
 
@@ -102,7 +119,9 @@ label {
   margin-bottom: 8px;
   color: #0f172a;
 }
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid #e2e8f0;
@@ -110,7 +129,9 @@ input, select, textarea {
   background-color: #f8fafc;
   font-family: inherit;
 }
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: #1d4ed8;
   background-color: white;

@@ -6,6 +6,10 @@
     "contact": "Contact",
     "getStarted": "Get Started"
   },
+  "auth": {
+    "login": "Sign In",
+    "logout": "Logout"
+  },
   "footer": {
     "brandDesc": "Your gateway to mastering new languages. Join thousands of students learning with our expert instructors.",
     "quickLinks": "Quick Links",
