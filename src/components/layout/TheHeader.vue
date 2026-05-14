@@ -12,6 +12,27 @@
           <router-link to="/shop" @click="closeMenu">{{ $t('nav.shop') }}</router-link>
           <router-link to="/contact" @click="closeMenu">{{ $t('nav.contact') }}</router-link>
         </nav>
+
+        <div class="mobile-actions mobile-only">
+          <div class="divider"></div>
+          
+          <template v-if="authStore.user">
+            <router-link 
+              v-if="authStore.isAdmin" 
+              to="/admin" 
+              class="btn-outline admin-btn"
+              @click="closeMenu"
+            >
+              Admin
+            </router-link>
+
+            <button @click="logoutAndClose" class="btn-outline">{{ $t('nav.logout') }}</button>
+          </template>
+          
+          <router-link v-else to="/login" class="btn-outline" @click="closeMenu">
+            {{ $t('nav.login') }}
+          </router-link>
+        </div>
       </div>
 
       <div class="header-actions">
@@ -37,7 +58,7 @@
               Admin
             </router-link>
 
-            <button @click="authStore.logout" class="btn-outline">{{ $t('nav.logout') }}</button>
+            <button @click="logoutAndClose" class="btn-outline">{{ $t('nav.logout') }}</button>
           </template>
           
           <router-link v-else to="/login" class="btn-outline" @click="closeMenu">
@@ -62,9 +83,11 @@
 import { useAuthStore } from '@/stores/authStore'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 const authStore = useAuthStore()
 const { locale } = useI18n()
+const router = useRouter()
 const isMenuOpen = ref(false)
 
 const toggleMenu = () => {
@@ -73,6 +96,12 @@ const toggleMenu = () => {
 
 const closeMenu = () => {
   isMenuOpen.value = false
+}
+
+const logoutAndClose = async () => {
+  await authStore.logout()
+  closeMenu()
+  router.push('/')
 }
 </script>
 
@@ -153,7 +182,6 @@ const closeMenu = () => {
   font-weight: 600;
   color: #0f172a;
   font-size: 0.95rem;
-  
   max-width: 150px; 
   white-space: nowrap; 
   overflow: hidden;
@@ -218,10 +246,14 @@ const closeMenu = () => {
   padding: 0;
   line-height: 1;
 }
+.mobile-only {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .desktop-only { display: none; }
   .mobile-menu-btn { display: block; }
+  
   .nav-group {
     display: none; 
     position: absolute;
@@ -232,18 +264,45 @@ const closeMenu = () => {
     padding: 20px;
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
   }
-  .nav-group.is-open { display: flex; justify-content: center; }
+  
+  .nav-group.is-open { display: flex; }
+  
   .nav-links {
     flex-direction: column;
     gap: 20px;
     text-align: center;
     width: 100%;
   }
+  
   .nav-links a {
     font-size: 1.2rem;
     padding: 10px 0;
     display: block;
+  }
+
+  .mobile-actions.mobile-only {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .mobile-actions .btn-outline,
+  .mobile-actions .admin-btn {
+    text-align: center;
+    padding: 12px;
+    font-size: 1.1rem; 
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 10px 0;
   }
 }
 </style>
