@@ -37,16 +37,16 @@
               Admin
             </router-link>
 
-            <button @click="authStore.logout" class="btn-outline">{{ $t('auth.logout') }}</button>
+            <button @click="authStore.logout" class="btn-outline">{{ $t('nav.logout') }}</button>
           </template>
           
           <router-link v-else to="/login" class="btn-outline" @click="closeMenu">
-            {{ $t('auth.login') }}
+            {{ $t('nav.login') }}
           </router-link>
         </div>
 
         <router-link to="/contact" class="btn-dark desktop-only" @click="closeMenu">
-          Get Started
+           {{$t('nav.getStarted')}}
         </router-link>
           
         <button class="mobile-menu-btn" @click="toggleMenu">

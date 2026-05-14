@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper">
     <div v-if="!product" class="loading-container container">
-      <p>Loading product information...</p>
+      <p>{{ $t("product.loading") }}</p>
     </div>
     <div v-else class="product-detail-container container">
       <div class="product-hero">
@@ -24,7 +24,7 @@
           <p class="description">{{ product.description }}</p>
 
           <button class="btn-add-to-cart" @click="cartStore.addToCart(product); cartStore.isCartOpen = true">
-            Add to Cart
+            {{ $t("product.addToCart") }}
           </button>
         </div>
       </div>

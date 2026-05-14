@@ -3,12 +3,12 @@
     <section class="shop-hero">
         <div class="container hero-flex">
             <div class="hero-text">
-            <h1>Student Shop</h1>
-            <p>Browse our collection of learning materials, textbooks, and study aids</p>
+            <h1>{{$t("shop.title")}}</h1>
+            <p>{{$t("shop.subtitle")}}</p>
             </div>
 
             <button class="cart-trigger-btn" @click="cartStore.toggleCart">
-            🛒 {{ cartStore.cartCount }} items
+            🛒 {{ cartStore.cartCount }} {{$t("shop.items")}}
             </button>
         </div>
     </section>
@@ -17,10 +17,10 @@
     <section class="shop-content container">
       <div class="shop-filters">
         <select v-model="selectedLanguage" class="filter-btn dropdown-btn">
-          <option value="">All Languages</option>
-          <option value="English">English</option>
-          <option value="German">German</option>
-          <option value="Korean">Korean</option>
+          <option value="">{{$t('shop.allLanguages')}}</option>
+          <option value="English">{{$t('shop.english')}}</option>
+          <option value="German">{{$t('shop.german')}}</option>
+          <option value="Korean">{{$t('shop.korean')}}</option>
         </select>
 
         <button 
@@ -34,7 +34,7 @@
         </button>
       </div>
       <div v-if="shopStore.isLoading" class="loading">
-        Loading products from database...
+        {{$t('shop.loading')}}
       </div>
       <ShopGrid v-else :products="filteredProducts" />
       

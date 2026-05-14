@@ -4,9 +4,7 @@
     "courses": "강좌",
     "shop": "상점",
     "contact": "문의",
-    "getStarted": "시작하기"
-  },
-  "auth": {
+    "getStarted": "시작하기",
     "login": "로그인",
     "logout": "로그아웃"
   },
@@ -104,5 +102,54 @@
     "mainPhone": "대표전화: (555) 123-4567",
     "supportPhone": "고객지원: (555) 123-4568",
     "emailUs": "이메일 문의"
+  },
+  "checkout": {
+    "title": "주문 내역",
+    "emptyCart": "장바구니가 비어 있습니다 🛒",
+    "total": "결제 금액:",
+    "deliveryTitle": "배송 정보",
+    "deliverySubtitle": "상품 배송 정보를 입력해 주세요",
+    "fullName": "성명",
+    "namePlaceholder": "홍길동",
+    "email": "이메일",
+    "emailPlaceholder": "hong@example.com",
+    "phone": "전화번호",
+    "address": "배송지 주소",
+    "addressPlaceholder": "시, 도로명 주소, 우편번호...",
+    "processing": "처리 중...",
+    "confirm": "주문 확정"
+  },
+  "product": {
+    "loading": "상품 정보를 불러오는 중...",
+    "addToCart": "장바구니에 담기"
+  },
+  "shop": {
+    "title": "학생 상점",
+    "subtitle": "우리의 학습 자료, 교재 및 학습 보조 도구 컬렉션을 둘러보세요",
+    "items": "개 항목",
+    "allLanguages": "모든 언어",
+    "english": "영어",
+    "german": "독일어",
+    "korean": "한국어",
+    "loading": "데이터베이스에서 상품을 불러오는 중..."
+  },
+  "auth": {
+    "registration": "회원가입",
+    "signIn": "로그인",
+    "subtitle": "강의에 액세스하려면 정보를 입력하세요",
+    "password": "비밀번호",
+    "createAccount": "계정 만들기",
+    "or": "또는",
+    "signInGoogle": "Google로 로그인",
+    "alreadyHave": "이미 계정이 있으신가요?",
+    "dontHave": "계정이 없으신가요?",
+    "signUp": "가입하기"
+  },
+  "cart": {
+    "title": "장바구니",
+    "empty": "장바구니가 비어 있습니다. 상품을 추가해 보세요!",
+    "total": "합계:",
+    "checkout": "결제하기",
+    "addToCart": "장바구니에 담기"
   }
 }

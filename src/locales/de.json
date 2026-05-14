@@ -4,9 +4,7 @@
     "courses": "Kurse",
     "shop": "Geschäft",
     "contact": "Kontakt",
-    "getStarted": "Loslegen"
-  },
-  "auth": {
+    "getStarted": "Loslegen",
     "login": "Anmelden",
     "logout": "Abmelden"
   },
@@ -104,5 +102,64 @@
     "mainPhone": "Haupt: (555) 123-4567",
     "supportPhone": "Support: (555) 123-4568",
     "emailUs": "Schreiben Sie uns"
+  },
+  "checkout": {
+    "title": "Deine Bestellung",
+    "emptyCart": "Warenkorb ist leer 🛒",
+    "total": "Zu zahlen:",
+    "deliveryTitle": "Lieferinformationen",
+    "deliverySubtitle": "Bitte gib die Lieferinformationen für deinen Merchandise-Artikel ein",
+    "fullName": "Vollständiger Name",
+    "namePlaceholder": "Max Mustermann",
+    "email": "E-Mail",
+    "emailPlaceholder": "max@example.com",
+    "phone": "Telefon",
+    "address": "Lieferadresse",
+    "addressPlaceholder": "Stadt, Straße, Postleitzahl...",
+    "processing": "Wird bearbeitet...",
+    "confirm": "Bestellung bestätigen"
+  },
+  "product": {
+    "loading": "Produktinformationen werden geladen...",
+    "addToCart": "In den Warenkorb"
+  },
+  "shop": {
+    "title": "Studenten-Shop",
+    "subtitle": "Durchstöbere unsere Sammlung von Lernmaterialien, Lehrbüchern und Lernhilfen",
+    "items": "Artikel",
+    "allLanguages": "Alle Sprachen",
+    "english": "Englisch",
+    "german": "Deutsch",
+    "korean": "Koreanisch",
+    "loading": "Produkte werden aus der Datenbank geladen..."
+  },
+  "auth": {
+    "registration": "Registrierung",
+    "signIn": "Anmelden",
+    "subtitle": "Gib deine Daten ein, um auf Kurse zuzugreifen",
+    "password": "Passwort",
+    "createAccount": "Konto erstellen",
+    "or": "oder",
+    "signInGoogle": "Mit Google anmelden",
+    "alreadyHave": "Hast du bereits ein Konto?",
+    "dontHave": "Noch kein Konto?",
+    "signUp": "Registrieren"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Dein Warenkorb ist leer. Füge einige Produkte hinzu!",
+    "total": "Gesamt:",
+    "checkout": "Zur Kasse gehen",
+    "addToCart": "In den Warenkorb"
+  },
+  "admin": {
+    "title": "Admin-Panel",
+    "subtitle": "Bestellungen und Anfragen verwalten",
+    "tabOrders": "Merchandise-Bestellungen",
+    "tabRequests": "Kursanfragen",
+    "loading": "Daten werden geladen...",
+    "noOrders": "Noch keine Bestellungen. Niemand hat bisher dein Merchandise gekauft.",
+    "delete": "Löschen",
+    "noRequests": "Noch keine Kursanfragen. Versuch das Formular auf der Kontaktseite auszufüllen!"
   }
 }

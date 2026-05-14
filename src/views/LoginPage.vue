@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form-card login-wrapper">
-    <h2>{{ isRegister ? 'Registration' : 'Sign In' }}</h2>
-    <p class="subtitle">Enter your details to access courses</p>
+    <h2>{{ isRegister ? $t('auth.registration') : $t('auth.signIn') }}</h2>
+    <p class="subtitle">{{ $t('auth.subtitle') }}</p>
 
     <form @submit.prevent="handleAuth" class="form">
       <div class="form-group">
@@ -10,28 +10,28 @@
       </div>
 
       <div class="form-group">
-        <label>Password</label>
+        <label>{{ $t('auth.password') }}</label>
         <input v-model="password" type="password" placeholder="••••••••" required />
       </div>
 
       <button type="submit" class="btn-submit">
-        {{ isRegister ? 'Create Account' : 'Sign In' }}
+        {{ isRegister ? $t('auth.createAccount') : $t('auth.signIn') }}
       </button>
     </form>
 
     <div class="divider">
-      <span>or</span>
+      <span>{{ $t('auth.or') }}</span>
     </div>
 
     <button @click="loginWithGoogle" class="btn-google">
       <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="G" />
-      Sign In with Google
+      {{ $t('auth.signInGoogle') }}
     </button>
 
     <p class="toggle-auth">
-      {{ isRegister ? 'Already have an account?' : 'Don\'t have an account?' }}
+      {{ isRegister ? $t('auth.alreadyHave') : $t('auth.dontHave') }}
       <a href="#" @click.prevent="isRegister = !isRegister">
-        {{ isRegister ? 'Sign In' : 'Sign Up' }}
+        {{ isRegister ? $t('auth.signIn') : $t('auth.signUp') }}
       </a>
     </p>
   </div>

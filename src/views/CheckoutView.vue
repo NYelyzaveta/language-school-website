@@ -3,47 +3,47 @@
     <div class="checkout-container">
       
       <div class="order-summary">
-        <h2>Your Order</h2>
+        <h2>{{ $t('checkout.title')}}</h2>
         <ul v-if="cartStore.items.length > 0" class="item-list">
           <li v-for="item in cartStore.items" :key="item.id">
             <span>{{ item.title }} (x{{ item.quantity }})</span>
             <strong>${{ item.price * item.quantity }}</strong>
           </li>
         </ul>
-        <p v-else>Cart is empty 🛒</p>
+        <p v-else>{{ $t('checkout.emptyCart')}}</p>
         <div class="total">
-          <span>Total to pay:</span>
+          <span>{{ $t('checkout.total')}}</span>
           <strong>${{ cartStore.cartTotal }}</strong>
         </div>
       </div>
 
       <div class="form-section">
-        <h2>Delivery Information</h2>
-        <p class="subtitle">Please fill in the delivery information for your merchandise</p>
+        <h2>{{ $t('checkout.deliveryTitle')}}</h2>
+        <p class="subtitle">{{ $t('checkout.deliverySubtitle')}}</p>
 
         <form @submit.prevent="submitOrder" class="form">
           <div class="form-group">
-            <label>Full Name</label>
-            <input v-model="orderForm.fullName" type="text" placeholder="John Doe" required />
+            <label>{{ $t('checkout.fullName')}}e</label>
+            <input v-model="orderForm.fullName" type="text" :placeholder="$t('checkout.namePlaceholder')" required />
           </div>
 
           <div class="form-group">
-            <label>Email</label>
+            <label>{{ $t('checkout.email')}}</label>
             <input v-model="orderForm.email" type="email" placeholder="john@example.com" required />
           </div>
 
           <div class="form-group">
-            <label>Phone</label>
+            <label>{{ $t('checkout.phone')}}</label>
             <input v-model="orderForm.phone" type="tel" placeholder="+1..." required />
           </div>
 
           <div class="form-group">
-            <label>Delivery Address</label>
-            <textarea v-model="orderForm.address" rows="3" placeholder="City, Street address, postal code..." required></textarea>
+            <label>{{ $t('checkout.address')}}</label>
+            <textarea v-model="orderForm.address" rows="3" :placeholder="$t('checkout.addressPlaceholder')" required></textarea>
           </div>
 
           <button type="submit" class="btn-submit" :disabled="isSubmitting || cartStore.items.length === 0">
-            {{ isSubmitting ? 'Processing...' : 'Confirm Order' }}
+            {{ isSubmitting ? $t('checkout.processing') : $t('checkout.confirm') }}
           </button>
         </form>
       </div>

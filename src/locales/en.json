@@ -4,9 +4,7 @@
     "courses": "Courses",
     "shop": "Shop",
     "contact": "Contact",
-    "getStarted": "Get Started"
-  },
-  "auth": {
+    "getStarted": "Get Started",
     "login": "Sign In",
     "logout": "Logout"
   },
@@ -104,5 +102,63 @@
     "mainPhone": "Main: (555) 123-4567",
     "supportPhone": "Support: (555) 123-4568",
     "emailUs": "Email Us"
+  },
+  "checkout": {
+    "title": "Your Order",
+    "emptyCart": "Cart is empty 🛒",
+    "total": "Total to pay:",
+    "deliveryTitle": "Delivery Information",
+    "deliverySubtitle": "Please fill in the delivery information for your merchandise",
+    "fullName": "Full Name",
+    "namePlaceholder": "John Doe",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Delivery Address",
+    "addressPlaceholder": "City, Street address, postal code...",
+    "processing": "Processing...",
+    "confirm": "Confirm Order"
+  },
+  "product": {
+    "loading": "Loading product information...",
+    "addToCart": "Add to Cart"
+  },
+  "shop": {
+    "title": "Student Shop",
+    "subtitle": "Browse our collection of learning materials, textbooks, and study aids",
+    "items": "items",
+    "allLanguages": "All Languages",
+    "english": "English",
+    "german": "German",
+    "korean": "Korean",
+    "loading": "Loading products from database..."
+  },
+  "auth": {
+    "registration": "Registration",
+    "signIn": "Sign In",
+    "subtitle": "Enter your details to access courses",
+    "password": "Password",
+    "createAccount": "Create Account",
+    "or": "or",
+    "signInGoogle": "Sign In with Google",
+    "alreadyHave": "Already have an account?",
+    "dontHave": "Don't have an account?",
+    "signUp": "Sign Up"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty. Start adding some products!",
+    "total": "Total:",
+    "checkout": "Proceed to Checkout",
+    "addToCart": "Add to Cart"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage orders and requests",
+    "tabOrders": "Merchandise Orders",
+    "tabRequests": "Course Requests",
+    "loading": "Loading data...",
+    "noOrders": "No orders yet. Nobody has bought your merchandise.",
+    "delete": "Delete",
+    "noRequests": "No course requests yet. Try filling out the form on the Contact page!"
   }
 }

@@ -1,8 +1,8 @@
 <template>
   <div class="admin-wrapper">
     <div class="admin-header">
-      <h2>Admin Panel</h2>
-      <p class="subtitle">Manage orders and requests</p>
+      <h2>{{ $t('admin.title') }}</h2>
+      <p class="subtitle">{{ $t('admin.subtitle') }}</p>
     </div>
 
     <div class="tabs">
@@ -11,24 +11,24 @@
         :class="{ active: activeTab === 'orders' }"
         @click="activeTab = 'orders'"
       >
-        📦 Merchandise Orders
+        📦 {{ $t('admin.tabOrders') }}
       </button>
       <button
         class="tab-btn"
         :class="{ active: activeTab === 'requests' }"
         @click="activeTab = 'requests'"
       >
-        🎓 Course Requests
+        🎓 {{ $t('admin.tabRequests') }}
       </button>
     </div>
 
-    <div v-if="isLoading" class="loading">Loading data...</div>
+    <div v-if="isLoading" class="loading">{{ $t('admin.loading') }}</div>
 
     <div v-else class="content-list">
       
       <template v-if="activeTab === 'orders'">
         <div v-if="orders.length === 0" class="empty-state">
-          No orders yet. Nobody has bought your merchandise.
+          {{ $t('admin.noOrders') }}
         </div>
 
         <div v-for="order in orders" :key="order.id" class="list-item">
@@ -39,7 +39,7 @@
             </div>
             
             <button @click="deleteItem('orders', order.id)" class="btn-delete">
-              🗑️ Delete
+              🗑️ {{ $t('admin.delete') }}
             </button>
           </div>
           
@@ -54,7 +54,7 @@
 
       <template v-if="activeTab === 'requests'">
         <div v-if="requests.length === 0" class="empty-state">
-          No course requests yet. Try filling out the form on the Contact page!
+          {{ $t('admin.noRequests') }}
         </div>
 
         <div v-for="req in requests" :key="req.id" class="list-item">
@@ -65,7 +65,7 @@
             </div>
 
             <button @click="deleteItem('course_registrations', req.id)" class="btn-delete">
-              🗑️ Delete
+              🗑️ {{ $t('admin.delete') }}
             </button>
           </div>
           

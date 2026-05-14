@@ -23,7 +23,7 @@
             <span class="price">${{ product.price }}</span>
           </div> 
           <button class="btn-enroll" @click="cartStore.addToCart(product)">
-            Add to Cart
+            {{ $t('cart.addToCart') }}
           </button>
         </div>
       </div>

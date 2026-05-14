@@ -5,13 +5,13 @@
     <div class="cart-drawer" v-if="cartStore.isCartOpen">
       
       <div class="cart-header">
-        <h2>Shopping Cart</h2>
+        <h2>{{ $t('cart.title') }}t</h2>
         <button class="close-btn" @click="cartStore.toggleCart">✕</button>
       </div>
 
       <div class="cart-body">
         <div v-if="cartStore.items.length === 0" class="empty-cart">
-          Your cart is empty. Start adding some products!
+          {{ $t('cart.empty') }}
         </div>
     
         <div v-else class="cart-items">
@@ -39,10 +39,10 @@
 
       <div class="cart-footer" v-if="cartStore.items.length > 0">
         <div class="total-row">
-          <span>Total:</span>
+          <span>{{ $t('cart.total') }}</span>
           <span class="total-price">${{ cartStore.cartTotal.toFixed(2) }}</span>
         </div>
-        <button class="checkout-btn" @click="goToCheckout">Proceed to Checkout</button>
+        <button class="checkout-btn" @click="goToCheckout">{{ $t('cart.checkout') }}</button>
       </div>
       
     </div>
