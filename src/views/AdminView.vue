@@ -205,13 +205,23 @@ h2 {
   margin-bottom: 16px;
   padding-bottom: 16px;
   border-bottom: 1px dashed #e2e8f0;
+  gap: 15px; 
+}
+
+.item-header > div {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  word-break: break-word; 
 }
 
 .item-header strong {
   font-size: 1.1rem;
   color: #0f172a;
   text-transform: uppercase;
-  margin-right: 15px;
+  margin-right: 0; 
 }
 
 .price {
@@ -300,10 +310,22 @@ h2 {
   display: flex;
   align-items: center;
   gap: 5px;
+  flex-shrink: 0; 
 }
 
 .btn-delete:hover {
   background: #fef2f2;
   border-color: #ef4444;
+}
+
+@media (max-width: 600px) {
+  .item-header {
+    flex-direction: column; 
+  }
+  .btn-delete {
+    width: 100%; 
+    justify-content: center;
+    padding: 10px;
+  }
 }
 </style>

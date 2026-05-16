@@ -90,10 +90,9 @@ const filteredProducts = computed(() => {
 }
 
 .shop-hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.5rem; 
   color: #0f172a;
-  margin-bottom: 16px;
-  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .shop-hero p {
@@ -187,5 +186,22 @@ const filteredProducts = computed(() => {
   border-radius: 30px;
   width: fit-content;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .shop-hero {
+    padding: 40px 16px; 
+    overflow: hidden;
+  }
+
+  .shop-hero h1 {
+    font-size: 2.2rem !important; 
+    line-height: 1.2;
+    word-wrap: break-word; 
+  }
+  
+  .shop-hero p {
+    font-size: 1rem; 
+  }
 }
 </style>

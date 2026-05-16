@@ -5,7 +5,7 @@
     <div class="cart-drawer" v-if="cartStore.isCartOpen">
       
       <div class="cart-header">
-        <h2>{{ $t('cart.title') }}t</h2>
+        <h2>{{ $t('cart.title') }}</h2>
         <button class="close-btn" @click="cartStore.toggleCart">✕</button>
       </div>
 
@@ -69,7 +69,7 @@ const goToCheckout = () => {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
 
@@ -77,35 +77,51 @@ const goToCheckout = () => {
   position: fixed;
   top: 0;
   right: 0;
+  bottom: 0; 
   width: 100%;
   max-width: 450px;
-  height: 100vh;
   background: white;
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
 }
 
 .cart-header {
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
-  border-bottom: 1px solid #eaeaea;
 }
 
-.cart-header h2 { font-size: 1.5rem; margin: 0; }
-.close-btn { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #64748b; }
+.cart-header h2 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #64748b;
+}
 
 .cart-body {
-  flex-grow: 1;
+  flex: 1 1 auto; 
   overflow-y: auto;
-  padding: 24px;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.empty-cart { text-align: center; color: #64748b; margin-top: 50px; }
-
+.empty-cart {
+  text-align: center;
+  color: #64748b;
+  padding: 40px 0;
+}
 .cart-item {
   display: flex;
   gap: 16px;
@@ -148,14 +164,45 @@ const goToCheckout = () => {
 
 .remove-btn { background: none; border: none; color: #ef4444; cursor: pointer; }
 
-.cart-footer { padding: 24px; border-top: 1px solid #eaeaea; background: #fafafa; }
-.total-row { display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; }
-.total-price { color: #2563eb; }
-
-.checkout-btn {
-  width: 100%; padding: 16px; background: #0f172a; color: white; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer;
+.cart-footer {
+  margin-top: auto; 
+  padding: 20px;
+  border-top: 1px solid #e2e8f0;
+  background: white;
+  box-sizing: border-box;
+  padding-bottom: 30px; 
 }
 
-.slide-enter-active, .slide-leave-active { transition: transform 0.3s ease; }
-.slide-enter-from, .slide-leave-to { transform: translateX(100%); }
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: #0a0a1a;
+  color: white;
+  border: none;
+  border-radius: 12px; 
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-sizing: border-box;
+}
+.checkout-btn:hover {
+  background-color: #1e293b;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s ease;
+}
+.slide-enter-from, .slide-leave-to {
+  transform: translateX(100%);
+}
 </style>

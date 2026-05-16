@@ -23,7 +23,7 @@
 
         <form @submit.prevent="submitOrder" class="form">
           <div class="form-group">
-            <label>{{ $t('checkout.fullName')}}e</label>
+            <label>{{ $t('checkout.fullName')}}</label>
             <input v-model="orderForm.fullName" type="text" :placeholder="$t('checkout.namePlaceholder')" required />
           </div>
 
